@@ -1,0 +1,9 @@
+/* Pretty barebones here */
+@import 'reset.css' screen;
+
+body {
+  width: 100%;
+  overflow: hidden;
+  max-height: 100vh;
+  position: relative;
+}

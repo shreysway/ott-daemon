@@ -1,0 +1,43 @@
+.login-modal .phone-number-container .attest-message,
+.login-modal .email-or-fb-signin,
+.login-modal .or-div,
+.login-modal .fb-btn,
+.login-modal .email-login-container .form-wrapper .or-divider,
+.login-modal .back-button,
+.login-modal .close-btn{
+	display: none;
+}
+.login-modal>.generic-modal .modal-base{
+	min-height: 303px!important;
+}
+.login-modal .generic-modal .modal-base .modal-body{
+	padding: 0px 35px!important;
+}
+.signin-modal-wrapper .login-modal{
+	-webkit-backdrop-filter: blur(10px);
+	backdrop-filter: blur(10px)
+	/* background: none;*/
+}
+.login-modal .action-bg{
+	pointer-events: none;
+    cursor: default;
+}
+.login-modal .form-wrapper .forgot-password{
+	visibility: hidden;
+}
+.digi-login-backdrop{
+	position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #000;
+    z-index: 999999;
+}
+.digi-login-backdrop img{
+    width: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

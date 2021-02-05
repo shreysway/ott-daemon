@@ -1,0 +1,21 @@
+.focus_nav.focusswiper_focus_nav {
+    display: none;
+}
+.u-vip_3-BwE, .u-sub_X3EUg, .u-record_1oGYU, .u-upload_2YJRo, .u-app_Ubbmj   {
+    display: none;
+}
+div#m_6913, .youku-foot_2B1OU, #module_basic_comment, .g-footer,
+.u-vip, .u-sub, .u-record, .u-upload, .u-app, .vpactionv5_iframe_wrap, 
+.player-title .title-wrap .desc {
+    display: none;
+}
+
+#playerBox.playBox{
+    width: 100%;
+}
+#playerBox #player_sidebar{
+    display: none;
+}
+.ad-wrap, .YT-loginFrame-foot, div#YT-thirdParyBody{
+    display: none;
+}

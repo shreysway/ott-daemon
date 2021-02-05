@@ -1,0 +1,47 @@
+{
+  "manifest_version": 2,
+  "name": "Hulu Login Control",
+  "version": "1.0",
+  "description": "This extension will control Hulu login",
+  "author": "Ashvin Patel",
+  "content_scripts": [
+    {
+      "run_at": "document_idle",
+      "matches": [
+        "https://auth.hulu.com/web/login"
+      ],
+      "js": [
+        "js/jquery-2.2.4.min.js",
+        "js/socket.io.js",
+        "js/script.js"
+      ]
+    },
+    {
+      "run_at": "document_idle",
+      "matches": [
+        "https://www.hulu.com/*"
+      ],
+      "js": [
+        "js/jquery-2.2.4.min.js",
+        "js/socket.io.js",
+        "js/logged.js"
+      ]
+    },
+    {
+      "run_at": "document_idle",
+      "matches": [
+        "https://secure.hulu.com/account",
+        "https://secure.hulu.com/account/*"
+      ],
+      "js": [
+        "js/jquery-2.2.4.min.js",
+        "js/socket.io.js",
+        "js/loggedin.js"
+      ]
+    }
+  ],
+  "web_accessible_resources": [
+    "img/*.png",
+    "*.json"
+  ]
+}

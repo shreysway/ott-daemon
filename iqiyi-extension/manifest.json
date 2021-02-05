@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+  "name": "Iqiyi Login Control",
+  "version": "1.0",
+  "description": "This extension will control www.iqiyi.com login",
+  "author": "Ashvin Patel",
+  "content_scripts": [
+    {
+      "run_at": "document_start",
+      "matches": ["https://www.iqiyi.com/*","https://yule.iqiyi.com/*"],
+      "all_frames": true,
+      "css": [
+        "css/style.css"
+      ]
+    }
+  ],
+  "web_accessible_resources": [
+    "img/*.png",
+    "*.json"
+  ]
+}

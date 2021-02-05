@@ -1,0 +1,12 @@
+div#uma[aria-label="Account Notification"] {
+    display: none;
+}
+div#uma article.message {
+    display: none;
+}
+.member-footer{
+    display: none;
+}
+ul.account-links{
+	display: none !important;
+}

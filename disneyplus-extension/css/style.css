@@ -1,0 +1,8 @@
+#webAppFooter, footer, #footer{
+    display: none;
+}
+#account-dropdown li[aria-label="Account"], 
+#account-dropdown li[aria-label="Help"],
+#account-dropdown li[aria-label="Log out"]{
+    display: none;
+}

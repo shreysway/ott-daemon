@@ -1,0 +1,77 @@
+Netflix:
+{"module":"netflix","action":"back"}
+{"module":"netflix","action":"search"}
+{"module":"netflix","action":"setusername"}
+{"module":"netflix","action":"setpassword"}
+{"module":"netflix","action":"setsignin"}
+
+Youku:
+{"module":"youku","action":"setusername"}
+{"module":"youku","action":"setpassword"}
+{"module":"youku","action":"setsignin"}
+
+Amazon:
+{"module":"amazon","action":"setusername"}
+{"module":"amazon","action":"setpassword"}
+{"module":"amazon","action":"setsignin"}
+
+Hulu:
+{"module":"hulu","action":"setusername"}
+{"module":"hulu","action":"setpassword"}
+{"module":"hulu","action":"setsignin"}
+
+Iqiyi:
+{"module":"iqiyi","action":"setusername"}
+{"module":"iqiyi","action":"setpassword"}
+{"module":"iqiyi","action":"setsignin"}
+
+Hotstar
+Ipad to Service
+{"module":"hotstar","action":"back"}
+{"module":"hotstar","action":"search"}
+{"module":"hotstar","action":"forward"}
+{"module":"hotstar","action":"rewind"}
+{"module":"hotstar","action":"setsignin"}
+{"module":"hotstar","action":"setusername"}
+{"module":"hotstar","action":"setpassword"}
+{"module":"hotstar","action":"submitUsername"}
+{"module":"hotstar","action":"submitMobile"}
+{"module":"hotstar","action":"submitOTP"}
+Service to Ipad
+{"module":"hotstar","action":"showUsername"}
+{"module":"hotstar","action":"showPassword"}
+{"module":"hotstar","action":"showMobile"}
+{"module":"hotstar","action":"showOTP"}
+
+Youtube
+Service to ipad
+{"module":"youtube","action":"YouTubeReady","data":{},"message":""}
+{"module":"youtube","action":"status","data":{"title":"Naina - Neha Kakkar Version | Dangal | Specials by Zee Music Co.","author":"Zee Music Company","state":"PLAYING","duration":206.101,"position":0.04160718692016602},"message":""}
+Ipad to service
+{"module":"youtube","action":"changeVideo","data":{"video_id":"ixrt9UltGwI"}}
+{"module":"youtube","action":"play"}
+{"module":"youtube","action":"pause"}
+{"module":"youtube","action":"forward"}
+{"module":"youtube","action":"rewind"}
+{"module":"youtube","action":"seek","data":{"seconds":50}}
+
+WSpotify:
+Ipad to service
+{"module":"wspotify","action":"signin","data":{"code":"AQC0bmP0FK7E-3eidqT5XusAYNqy2i3PA3rhvCHedGJzXbxvVBVVXXKWw6DaRqWYbkhlDBIz5yQmqUp6jQ2WzRV5nciVfRzzDaV0TOh0sHGLqzVmUTGVL7bv9dK36rt54OZiO50z9lJOgApvp8cc48J6zrwU3V0QHea3gOBKT6-R2LuEciguHipWsi6b4RkeqeXIY2cMcbvoWrpnhihBx0wOymHkJUkKbI6cior3bYO8oCVUTGqjitjsDZJ_DnIF9zD8LADgho7nG6t0I1T2P0IzVj3nVrjGK9Sz0VU9HFWW1TponBGH1b652f6MwyizgV5JgO_s7Hgtga0&state=U5QisUSsBv7lRCWg"}}
+{"module":"wspotify","action":"signout","data":{"code":""}}
+{"module":"wspotify","action":"stop","data":{"code":""}}
+{"module":"wspotify","action":"checkin","data":{"code":""}}
+{"module":"wspotify","action":"checkout","data":{"code":""}}
+{"module":"wspotify","action":"playTrack","data":{"hotel_id":3462,"track_id":"2z4JYKZDLlFziglbMBKce0","latitude":"23.1690737","longitude":"75.7621151"}}
+{"module":"wspotify","action":"startPlayer","data":{"access_token":"12345"}}
+
+Spotify Integration
+{"module":"spotify","action":"setTokens","data":{"access_token": "dsafdf", "refresh_token":"dsfgfg"}}
+{"module":"spotify","action":"playlist","data":{"playlist_id":"37i9dQZF1DX8DSRR3tGze6"}}
+{"module":"spotify","action":"stop","data":{}}
+
+Wmusic (ipad to service)
+{"module":"wmusic","action":"changeMood","data":{"mood":1}}
+{"module":"wmusic","action":"updateMetaData","data":{"title":"Hole Hole","subtitle":"Chole Chole"}}
+{"module":"wmusic","action":"updateGuestData","data":{"guestName":"Bablu"}}
+

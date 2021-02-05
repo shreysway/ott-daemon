@@ -1,0 +1,13 @@
+#pv-footer{
+    display: none!important;
+}
+header#pv-nav.pv-nav .pv-nav-accounts label .pv-nav-account-icon:hover{
+    opacity: 0.7!important;
+}
+header#pv-nav.pv-nav .pv-nav-accounts label:before,
+header#pv-nav.pv-nav .pv-nav-dropl input[type=checkbox]:checked~label:after{
+    display: none !important;
+}
+#pv-nav-accounts ul[role="menu"] {
+    display: none;
+}

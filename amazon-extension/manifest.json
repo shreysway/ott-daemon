@@ -1,0 +1,51 @@
+  {
+  "manifest_version": 2,
+  "name": "PrimeVideo DigiValet",
+  "version": "1.0",
+  "description": "This extension will control Amazon Prime login",
+  "author": "Ashvin Patel",
+  "permissions": [
+    "cookies",
+    "storage",
+    "http://*.primevideo.com/",
+    "https://*.primevideo.com/"
+  ],
+  "background": { 
+    "scripts": ["js/background.js"],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "run_at": "document_idle",
+      "matches": [
+        "https://www.amazon.com/ap/signin",
+        "https://www.amazon.com/ap/signin/*",
+        "https://www.amazon.com/ap/signin?*"
+      ],
+      "js": [
+        "js/jquery-2.2.4.min.js",
+        "js/socket.io.js",
+        "js/script.js"
+      ],
+      "css": [
+        "css/signin.css"
+      ]
+    },
+    {
+      "run_at": "document_start",
+      "matches": [
+        "https://www.primevideo.com/*"
+      ],
+      "js": [
+        "js/logged.js"
+      ],
+      "css": [
+        "css/style.css"
+      ]
+    }
+  ],
+  "web_accessible_resources": [
+    "img/*.png",
+    "*.json"
+  ]
+}

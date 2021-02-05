@@ -1,0 +1,47 @@
+{
+  "manifest_version": 2,
+  "name": "Hotstar DigiValet",
+  "version": "1.0.0",
+  "description": "This extension will extend Hotstar end make it compatible to DigiValet",
+  "author": "Ashvin Patel",
+  "permissions": [
+    "tabs",
+    "history",
+    "webNavigation"
+  ],
+  "background": { 
+    "scripts": ["js/background.js"],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "run_at": "document_start",
+      "matches": [
+        "https://www.hotstar.com/in",
+        "https://www.hotstar.com/in/"
+      ],
+      "css": [
+        "css/home.css"
+      ]
+    },
+    {
+      "run_at": "document_start",
+      "matches": [
+        "https://www.hotstar.com/*"
+      ],
+      "js": [
+        "js/jquery-2.2.4.min.js",
+        "js/socket.io.js",
+        "js/Hotstar.js",
+        "js/script.js"
+      ],
+      "css": [
+        "css/style.css"
+      ]
+    }
+  ],
+  "web_accessible_resources": [
+    "img/*.png",
+    "*.json"
+  ]
+}

@@ -1,0 +1,46 @@
+.frame-close[rseat="psprt_close"],
+.qy-header-side .header-vip, .qy-header-side .header-upload, 
+.qy-header-side .header-download, .qy-header-side .header-info, 
+.qy-header-side .header-record,
+.qy-focus-side-panel, #block-C, .qy-nav-panel,
+.qy-scroll-anchor .scroll-anchor .anchor-list,
+footer, .qy-footer,
+.qy-nav a[href*="vip"], #block-I, #qitancommonarea,
+.qy-footer-channel, .channel-footer-warp,
+a[data-player-hook="pluginerror-downLoad"] + .iqp-layer-sub,
+.qy-play-role-tab,
+.play-con-mnc article.qy-mod-wrap,
+#playerContainer aside.player-sd,
+.qy-player-wrap .player-mnc .player-icons,
+.qy-player-wrap .player-mnc .player-mnb,
+.qy-player-wrap .player-mnc iqpdiv .bottom-public a.know-detail,
+.qy-player-wrap .player-mnc iqpdiv .cupid-public-time a.public-vip,
+.play-con-sd article #block-L,
+.qy-focus-category, div[data-adzone], .qy-player-side-ear, .iqp-barrage,
+.qy-mod-ad, .qy-channel-page .qy-channel-content #block-D.qy-mod-wrap,
+.qy-channel-page .qy-focus-thumbnail .qy-thumbnail-list-mix,
+.qy-channel-page .qy-focus-thumbnail #block-C.qy-focus-thumbnail-subnav{
+    display: none;
+}
+.qy-classes-logo.j_pingback_view {
+    visibility: hidden;
+    height: 0;
+}
+.iqp-player video{
+    pointer-events: none;
+    cursor: default;
+    text-decoration: none;
+    color: black;
+}
+
+a[data-player-hook="pluginerror-downLoad"]{
+    display: none !important;
+}
+.qy-player-wrap .player-mnc{
+    margin-right: 0 !important;
+}
+@media screen and (min-width: 1766px){
+    .qy-flash-box {
+        height: 100% !important;
+    }
+}

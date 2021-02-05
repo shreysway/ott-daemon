@@ -1,0 +1,48 @@
+{
+  "manifest_version": 2,
+  "name": "Netflix Login Control",
+  "version": "1.1.0",
+  "description": "This extension will control netflix login",
+  "author": "Ashvin Patel",
+  "content_scripts": [
+    {
+      "run_at": "document_idle",
+      "matches": [
+        "https://www.netflix.com/login",
+        "https://www.netflix.com/Login",
+        "https://www.netflix.com/*/login",
+        "https://www.netflix.com/*/Login"
+      ],
+      "js": [
+        "js/jquery-2.2.4.min.js",
+        "js/socket.io.js",
+        "js/login.js"
+      ],
+      "css": [
+        "css/login.css"
+      ]
+    },
+    {
+      "run_at": "document_idle",
+      "matches": [
+        "https://www.netflix.com/browse/*",
+        "https://www.netflix.com/search?*",
+        "https://www.netflix.com/Kids/*",
+        "https://www.netflix.com/kids/*",
+        "https://www.netflix.com/watch/"
+      ],
+      "js": [
+        "js/jquery-2.2.4.min.js",
+        "js/socket.io.js",
+        "js/logged.js"
+      ],
+      "css": [
+        "css/style.css"
+      ]
+    }
+  ],
+  "web_accessible_resources": [
+    "img/*.png",
+    "*.json"
+  ]
+}
